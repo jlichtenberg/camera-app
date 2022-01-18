@@ -12,7 +12,7 @@ function cameraStart() {
         .getUserMedia(constraints)
         .then(function(stream) {
         track = stream.getTracks()[0];
-        cameraView.src = stream;
+        cameraView.srcObject = stream;
     })
     .catch(function(error) {
         console.error("Oops. Something is broken.", error);
